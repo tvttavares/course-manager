@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { CourseListComponent } from './courses/course-list.components';
 import { StarComponent } from './star/star.component';
@@ -17,7 +19,9 @@ import { CourseInfoComponent } from './courses/course-info.component';
   ],
   imports: [
     BrowserModule, 
-    FormsModule, RouterModule.forRoot([
+    FormsModule, 
+    HttpClientModule,
+    RouterModule.forRoot([
       {
         path: 'courses', component: CourseListComponent
       },
